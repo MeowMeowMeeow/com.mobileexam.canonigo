@@ -1,0 +1,128 @@
+<resources>
+    <string name="Agender">Unknown</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+
+    <string name="Alive">Alive</string>
+    <string name="Dead">Dead</string>
+
+    <string name="Human">Human</string>
+    <string name="Alien">Alien</string>
+    <string name="Uknown">Unknown</string>
+
+
+    <string name="type">None</string>
+
+    <string name="app_name">RickMorty</string>
+    <string name="name1">Rick Sanchez</string>
+    <string name="nameO1">Earth (C-137)</string>
+    <string name="nameL1">Earth (Replacement Dimension)</string>
+
+
+    <string name="name2">Morty Smith</string>
+    <string name="nameO2">Earth (C-137)</string>
+    <string name="nameL2">Earth (Replacement Dimension)</string>
+
+
+
+    <string name="name3">Summer Smith</string>
+    <string name="nameO3">Earth (Replacement Dimension)</string>
+    <string name="nameL3">Earth (Replacement Dimension)</string>
+
+
+    <string name="name4">Beth Smith</string>
+    <string name="nameO4">Earth (Replacement Dimension)</string>
+    <string name="nameL4">Earth (Replacement Dimension)</string>
+
+
+    <string name="name5">Jerry Smith</string>
+    <string name="nameO5">Earth (Replacement Dimension)</string>
+    <string name="nameL5">Earth (Replacement Dimension)</string>
+
+
+    <string name="name6">Abadango Cluster Princess</string>
+    <string name="nameO6">Abadango</string>
+    <string name="nameL6">Abadango</string>
+
+
+    <string name="name7">Abradolf Lincler</string>
+    <string name="type7">Genetic experiment</string>
+    <string name="nameO7">Earth (Replacement Dimension)</string>
+    <string name="nameL7">Testicle Monster Dimension</string>
+
+
+    <string name="name8">Adjudicator Rick</string>
+    <string name="nameO8">unknown</string>
+    <string name="nameL8">Citadel of Ricks</string>
+
+    <string name="name9">Agency Director</string>
+    <string name="nameO9">Earth (Replacement Dimension)</string>
+    <string name="nameL9">Earth (Replacement Dimension)</string>
+
+
+    <string name="name10">Alan Rails</string>
+    <string name="type10">Superhuman (Ghost trains summoner)</string>
+    <string name="nameO10">unknown</string>
+    <string name="nameL10">Worldender’s Lair</string>
+
+
+    <string name="name11">Albert Einstein</string>
+    <string name="nameO11">Earth (C-137)</string>
+    <string name="nameL11">Earth (C-137)</string>
+
+
+    <string name="name12">Alexander</string>
+    <string name="nameO12">Anatomy Park</string>
+    <string name="nameL12">Anatomy Park</string>
+
+    <string name="name13">Alien Googah</string>
+    <string name="nameO13">unknown</string>
+    <string name="nameL13">unknown</string>
+
+    <string name="name14">Alien Morty</string>
+    <string name="nameO14">Citadel of Ricks</string>
+    <string name="nameL14">Citadel of Ricks</string>
+
+    <string name="name15">Alien Rick</string>
+    <string name="nameO15">Citadel of Ricks</string>
+    <string name="nameL15">Citadel of Ricks</string>
+
+    <string name="name16">Amish Cyborg</string>
+    <string name="type16">Parasite</string>
+    <string name="nameO16">unknown</string>
+    <string name="nameL16">unknown</string>
+
+
+    <string name="name17">Annie</string>
+    <string name="nameO17">Anatomy Park</string>
+    <string name="nameL17">Anatomy Park</string>
+
+
+    <string name="name18">Antenna Morty</string>
+    <string name="type18">Human with antennae</string>
+    <string name="nameO18">Citadel of Ricks</string>
+    <string name="nameL18">Citadel of Ricks</string>
+
+
+    <string name="name19">Antenna Rick</string>
+    <string name="type19">Human with antennae</string>
+    <string name="nameO19">Citadel of Ricks</string>
+    <string name="nameL19">Citadel of Ricks</string>
+
+    <string name="name20">Ants in my Eyes Johnson</string>
+    <string name="type20">Human with ants in his eyes</string>
+    <string name="nameO20">unknown</string>
+    <string name="nameL20">unknown</string>
+
+    <string name="President_Morty">President Morty</string>
+    <string name="nameO21">unknown</string>
+    <string name="nameL21">unknown</string>
+
+
+    <string name="Evil_Morty">Evil Morty</string>
+    <string name="nameO22">Dimension 79⊢⊇V</string>
+    <string name="nameL22">Central Finite Curve</string>
+    <string name="more_details">" More Details"</string>
+
+
+</resources>
