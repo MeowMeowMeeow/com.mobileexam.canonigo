@@ -14,8 +14,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.mobileexample.canonigo.data.Repository
 import com.mobileexample.canonigo.data.Wubalubadubdub
 import com.mobileexample.canonigo.ui.theme.RickAndMortyTheme
+import com.mobileexample.canonigo.utils.screens.RickandMortyApp
+import com.mobileexample.canonigo.utils.screens.RickandMortyList
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,34 +27,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RickAndMortyTheme {
-                MainScreen()
+                val navController = rememberNavController()
+                RickandMortyApp(navController = navController)
             }
         }
     }
 }
 
-@Composable
-fun MainScreen() {
-    var showStarterScreen by remember { mutableStateOf(true) }
-
-    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-        if (showStarterScreen) {
-            StarterScreen(
-                onAnimationFinished = { showStarterScreen = false }
-            )
-        } else {
-            RickandMortyApp(
-                characters = Wubalubadubdub().loadCharacters(),
-                modifier = Modifier.padding(innerPadding)
-            )
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewApp() {
-    RickAndMortyTheme {
-        MainScreen()  // Preview the MainScreen composable
-    }
-}

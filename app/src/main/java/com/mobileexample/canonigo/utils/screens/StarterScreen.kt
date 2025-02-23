@@ -1,4 +1,4 @@
-package com.mobileexample.canonigo
+package com.mobileexample.canonigo.utils.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -9,6 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import com.mobileexample.canonigo.R
 import kotlinx.coroutines.delay
 
 @Composable

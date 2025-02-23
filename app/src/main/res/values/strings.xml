@@ -10,10 +10,12 @@
     <string name="Alien">Alien</string>
     <string name="Uknown">Unknown</string>
 
-
+    <string name="lblOrigin">Origin</string>
+    <string name="lblLocation">Location</string>
+    <string name="lblGender">Gender</string>
     <string name="type">None</string>
 
-    <string name="app_name">RickMorty</string>
+    <string name="app_name">MB2_Canonigo</string>
     <string name="name1">Rick Sanchez</string>
     <string name="nameO1">Earth (C-137)</string>
     <string name="nameL1">Earth (Replacement Dimension)</string>
@@ -123,6 +125,7 @@
     <string name="nameO22">Dimension 79⊢⊇V</string>
     <string name="nameL22">Central Finite Curve</string>
     <string name="more_details">" More Details"</string>
+    <string name="lblEpisodes">Episodes</string>
 
 
 </resources>

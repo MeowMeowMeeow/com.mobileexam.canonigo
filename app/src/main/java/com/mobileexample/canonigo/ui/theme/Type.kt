@@ -13,7 +13,8 @@ val LuckiestGuy = FontFamily(
     Font(R.font.luckiestguy_regular, FontWeight.Normal)
 )
 val Orbitron = FontFamily(
-    Font(R.font.orbitron_regular,FontWeight.Normal )
+    Font(R.font.orbitron_regular,FontWeight.Normal ),
+    Font(R.font.orbitron_bold,FontWeight.Bold )
 )
 
 val Typography = Typography(
@@ -38,5 +39,19 @@ val Typography = Typography(
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 1.sp
-    )
+    ),
+    titleLarge = TextStyle(
+        fontFamily = LuckiestGuy,
+        fontWeight = FontWeight.Bold,
+        fontSize = 32.sp,
+        lineHeight = 28.sp,
+        letterSpacing = 5.sp
+    ),
+    labelMedium = TextStyle(
+        fontFamily = Orbitron,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 1.sp
+    ),
 )
