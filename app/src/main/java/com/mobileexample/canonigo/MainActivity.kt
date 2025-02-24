@@ -15,11 +15,14 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.mobileexample.canonigo.data.NetworkRepository
 import com.mobileexample.canonigo.data.Repository
 import com.mobileexample.canonigo.data.Wubalubadubdub
+import com.mobileexample.canonigo.network.ApiService
 import com.mobileexample.canonigo.ui.theme.RickAndMortyTheme
 import com.mobileexample.canonigo.utils.screens.RickandMortyApp
 import com.mobileexample.canonigo.utils.screens.RickandMortyList
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,4 +36,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
