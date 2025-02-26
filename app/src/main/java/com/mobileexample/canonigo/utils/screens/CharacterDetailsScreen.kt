@@ -43,6 +43,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -53,6 +54,8 @@ import com.mobileexample.canonigo.model.Character
 import com.mobileexample.canonigo.model.Location
 import com.mobileexample.canonigo.model.Origin
 import com.mobileexample.canonigo.ui.theme.RickAndMortyTheme
+import com.mobileexample.canonigo.utils.LocationImage
+import com.mobileexample.canonigo.utils.OriginImage
 import com.mobileexample.canonigo.utils.genderIcon
 
 import com.mobileexample.canonigo.utils.statusDetailsColor
@@ -171,7 +174,7 @@ fun CharacterDetailsScreen(
                             modifier = Modifier.padding(16.dp)
                         ) {
                             Image(
-                                painter = painterResource(R.drawable.originimage),
+                                painter = painterResource(OriginImage(origin.name)),
                                 contentDescription = "Origin Image",
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier
@@ -234,7 +237,10 @@ fun CharacterDetailsScreen(
                             )
                             .fillMaxWidth()
                             .padding(8.dp)
-                            .clickable { locationexpand = !locationexpand }
+                            .then(
+                                if (location.name.isBlank() || location.name == "unknown") Modifier
+                                else Modifier.clickable { locationexpand = !locationexpand }
+                            )
                     ) {
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
@@ -242,7 +248,7 @@ fun CharacterDetailsScreen(
                             modifier = Modifier.padding(16.dp)
                         ) {
                             Image(
-                                painter = painterResource(R.drawable.locationimage),
+                                painter = painterResource(LocationImage(location.name)),
                                 contentDescription = "Location Image",
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier
@@ -250,7 +256,8 @@ fun CharacterDetailsScreen(
                                     .clip(RoundedCornerShape(20.dp))
                             )
 
-                            Column(modifier = Modifier.weight(1f)) {
+                            Column(  modifier = Modifier.weight(1f)
+                                .padding(end = 8.dp)) {
                                 Text(
                                     text = stringResource(R.string.lblLocation),
                                     style = MaterialTheme.typography.titleMedium,
@@ -259,7 +266,8 @@ fun CharacterDetailsScreen(
                                 Text(
                                     text = location.name,
                                     style = MaterialTheme.typography.bodyMedium,
-                                    color = MaterialTheme.colorScheme.onSurface
+                                    color = MaterialTheme.colorScheme.onSurface,
+
                                 )
                             }
                          
@@ -272,7 +280,9 @@ fun CharacterDetailsScreen(
                                         painterResource(id = R.drawable.drop_down)
                                     },
                                     contentDescription = "Dropdown",
-                                    tint = MaterialTheme.colorScheme.primary
+                                    tint = MaterialTheme.colorScheme.primary,
+
+
                                 )
                             }
                         }
@@ -307,12 +317,15 @@ fun CharacterDetailsScreen(
                             .padding(8.dp)
                             .clickable { episodeexpand = !episodeexpand }
                     ) {
-                        Row (verticalAlignment = Alignment.CenterVertically , modifier = Modifier.padding(15.dp)){
+                        Row (   verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(16.dp),
+                            modifier = Modifier.padding(16.dp)){
                             Text(
                                 text = stringResource(R.string.lblEpisodes),
                                 style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.primary,
-                                textAlign = TextAlign.Center,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier.weight(1f)
 
                             )
                             Icon(

@@ -76,10 +76,10 @@ import kotlinx.coroutines.delay
 @Composable
 fun RickandMortyApp(
     modifier: Modifier = Modifier,
-    viewModel: RickViewModel = viewModel(factory = RickViewModel.Factory),
+   viewmodel: RickViewModel = viewModel(factory = RickViewModel.Factory),
     navController: NavHostController = rememberNavController()
 ) {
-    val uiState by viewModel.rickMortyUiState.collectAsState()
+    val uiState by viewmodel.rickMortyUiState.collectAsState()
     val isDarkTheme = isSystemInDarkTheme()
     val scaffoldBackgroundColor = MaterialTheme.colorScheme.onSurface
 

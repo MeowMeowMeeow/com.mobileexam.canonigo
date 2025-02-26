@@ -2,6 +2,7 @@ package com.mobileexample.canonigo.data
 
 
 
+import androidx.room.Database
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.mobileexample.canonigo.network.ApiService
 import kotlinx.serialization.json.Json
@@ -12,8 +13,8 @@ interface Wubalubadubdub{
 val characterRepository: Repository
 }
 
-class DefaultWubalubadubdub : Wubalubadubdub{
-private val BASE_URL ="https://rickandmortyapi.com/api/"
+class DefaultWubalubadubdub(private val dao: RoomRickDao) : Wubalubadubdub {
+    private val BASE_URL = "https://rickandmortyapi.com/api/"
 
     private val json = Json {
         ignoreUnknownKeys = true
@@ -28,9 +29,10 @@ private val BASE_URL ="https://rickandmortyapi.com/api/"
         retrofit.create(ApiService::class.java)
     }
 
-
     override val characterRepository: Repository by lazy {
-        NetworkRepository(retrofitService)
+        NetworkRepository(
+            api = retrofitService,
+            dao = dao
+        )
     }
-
 }
